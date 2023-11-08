@@ -53,7 +53,9 @@ function run(torun, arguments) {
     }
 }
 gamerem.onLoad()
-this.timeo = setTimeout(function() {
-    gamerem.onTick()
-    clearTimeout(this.timeo)
-}, 1);
+while (true) {
+    this.timeo = setTimeout(function() {
+        gamerem.onTick()
+        clearTimeout(this.timeo)
+    }, 1);
+}
