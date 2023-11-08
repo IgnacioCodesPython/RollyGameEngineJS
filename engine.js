@@ -48,8 +48,12 @@ function start() {
 function run(torun, arguments) {
     switch (torun) {
         case ("ElementCreate"): {
-
+            
         }
     }
 }
-gamerem.onload()
+gamerem.onLoad()
+this.timeo = setTimeout(function() {
+    gamerem.onTick()
+    clearTimeout(this.timeo)
+}, 1);
