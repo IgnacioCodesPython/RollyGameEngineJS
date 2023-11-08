@@ -1,8 +1,9 @@
 /* Rolly game engine file */
 
-/* Functions to use for  later - Importing */
+/* Functions to use for later - Importing */
 
 animatione = require("animate.js") /* Animation package */
+gamerem = require("game.js")
 
 /* Basic functions */
 
@@ -15,13 +16,20 @@ animatione = require("animate.js") /* Animation package */
  * 
  */
 function help(showOn) {
-    
+    game_container.innerHTML = `
+        <p></p>
+    `
 }
 
 /* HTML content functions */
 
-function changeContent() {
-    
+/**
+ * 
+ * @param {HTML code} HTMLContent 
+ * @param {element} where 
+ */
+function changeContent(HTMLContent, where) {
+    where.innerHTML = HTMLContent
 }
 
 /* Animation playing functions */
@@ -29,3 +37,19 @@ function changeContent() {
 function start() {
     animatione.play("game_intro", "game_container")
 }
+
+/* Game functions */
+
+/**
+ * This is a function to run a built-in game built function.
+ * @param {string function name} torun 
+ * @param {list with arguments} arguments 
+ */
+function run(torun, arguments) {
+    switch (torun) {
+        case ("ElementCreate"): {
+
+        }
+    }
+}
+gamerem.onload()

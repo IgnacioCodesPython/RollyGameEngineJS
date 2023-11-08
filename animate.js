@@ -50,6 +50,7 @@ function play(animation, where) {
                         }
                     }
                 `
+                where.innerHTML = ''
                 clearTimeout(this.timeo)
             }, 5000);
     }
